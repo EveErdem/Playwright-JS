@@ -37,11 +37,11 @@ test('utube-amazon', async () => {
     await page.getByRole('link', { name: 'YouTube Ana Sayfası' }).click();
     //  await page.waitForURL('https://www.youtube.com/');
 
-    //await page.goto('https://www.amazon.com/');
-
-    await page.goto('https://www.youtube.com/');
-
     await page.goto('https://www.amazon.com/');
+
+    await page.goBack('https://www.youtube.com/');
+
+    await page.goForward('https://www.amazon.com/');
 
     await page.getByRole('link', { name: 'Amazon' }).click();
     await page.getByTitle();
